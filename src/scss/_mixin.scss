@@ -1,0 +1,126 @@
+@mixin flexCentCent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url('../assets/fonts/#{$file_name}.woff') format('woff'), url('../assets/fonts/#{$file_name}.woff2') format('woff2');
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }    
+}
+
+@mixin roseButton {
+    width: 263px;
+    height: 68px;
+    border-radius: 34px;
+    background-color: $rose-button-color;
+    border: solid 2px $rose-button-color;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    color: $button-color-grey-text;
+}
+
+@mixin roseButton-hover {
+    cursor: pointer;
+    background-color: $font-white;
+    border-color: $rose-button-color;
+}
+
+@mixin blueButton {
+    width: 150px;
+    height: 68px;
+    border-radius: 34px;
+    background-color: $blue-button-color;
+    border: solid 2px $blue-button-color;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    color: $button-color-grey-text;
+}
+
+@mixin blueButton-hover {
+    cursor: pointer;
+    background-color: $font-white;
+    border-color: $blue-button-color;
+}
+
+@mixin white-blueButton {
+    width: 186px;
+    height: 68px;
+    border-radius: 34px;
+    border: solid 1px $white-blue-button-color;
+    background-color: $font-white;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    color: $white-blue-button-color;
+}
+
+@mixin white-blueButton-hover {
+    cursor: pointer;
+    background-color: $white-blue-button-color;
+    color: $font-white;
+}
+
+@mixin white-roseButton {
+    width: 228px;
+    height: 68px;
+    border-radius: 34px;
+    border: solid 1px $white-rose-button-color;
+    background-color: $font-white;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    color: $white-rose-button-color;
+}
+
+@mixin white-roseButton-hover {
+    cursor: pointer;
+    background-color:  $white-rose-button-color;
+    color: $font-white;
+}
+
+
+// Responsive
+
+$mobile-width: 480px;
+$tablet_width: 768px;
+$desktop-width: 1279px;
+$fullhd-width: 1579px;
+
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
+    } 
+} 
+
+@mixin tablet {
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet_width}) {
+        @content;
+    } 
+} 
+
+@mixin laptop {
+    @media (min-width: #{$tablet_width}) and (max-width: #{$desktop-width}) {
+        @content;
+    } 
+} 
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) and (max-width: #{$fullhd-width}) {
+        @content;
+    } 
+}
+
+@mixin fullhd {
+    @media (min-width: #{$fullhd-width + 1px}) {
+        @content;
+    } 
+}

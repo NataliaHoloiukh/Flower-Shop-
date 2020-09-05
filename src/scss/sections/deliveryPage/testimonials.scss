@@ -1,0 +1,113 @@
+.testimon {
+    width: 100%;
+    height: auto;
+
+    &__wrap {
+        width: 77%;
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-family: 'Merriweather';
+        font-size: 50px;
+        color: $button-color-grey-text;
+        letter-spacing: 4px;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 143px;
+    }
+}
+
+// .hide-sm {
+//     display:none;
+// }
+
+// .hide-hd {
+//     display:none;
+// }
+
+.splide {
+
+    &__track {
+        height: 342px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__slide {
+        width: 672px;
+        height: fit-content;
+        border-radius: 185px;
+        border: solid 1px $main-rose;
+        position: relative;
+        padding: 38px 47px 43px 46px;
+        display: flex;
+
+        &__avatar {
+            width: 100%;
+            height: 100%;
+            margin-right: 5%;
+
+            &--img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__text {
+            font-family: 'Montserrat';
+            font-size: 17px;
+            font-weight: 300;
+            color: $testimon-text-color;
+            margin-bottom: 19px;
+        }
+
+        &__name {
+            font-family: 'Montserrat';
+            font-size: 17px;
+            color: $main-rose;
+        }
+
+        &__tulip {
+            position: absolute;
+            left: -30px;
+            top: -41px;
+            z-index: 0;
+
+            &--downRight {
+                position: absolute;
+                right: -30px;
+                bottom: -41px;
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__pagination {
+        height: 0px;
+
+        &__page {
+            width: 23px;
+            height: 22px;
+            border: solid 1px $main-rose;
+            border-radius: 50%;
+            margin: 9px;
+            background: $main-rose;
+            margin-top: 50px;
+            background-color: $font-white;
+
+            &.is-active{
+                background-color: $main-rose;
+                transform: scale(1);
+            }
+        }
+    }
+}

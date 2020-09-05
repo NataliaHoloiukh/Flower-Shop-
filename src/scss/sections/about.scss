@@ -1,0 +1,149 @@
+.about {
+    width: 100%;
+    height: auto;
+
+    &__wrap {
+        width: 80%;
+        height: 800px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        @include desktop {
+            width: 80%;
+        }
+
+        @include laptop {
+            width: 90%;
+        }
+    }
+
+    &__photo {
+        width: 30%;
+        height: auto;
+        position: relative;
+
+        @include desktop {
+            width: 45%;
+        }
+
+        @include laptop {
+            width: 45%;
+            z-index: -2;
+        }
+
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__text {
+        width: 40%;
+        margin-left: 4%;
+        position: relative;
+
+        @include desktop {
+            width: 44%;
+        }
+
+        @include laptop {
+            width: 44%;
+        }
+
+        &__title {
+            font-family: $h2-fontFamily;
+            font-size: $h2-fontSize;
+            line-height: 62px;
+            letter-spacing: 4px;
+            text-align: left;
+            color: $button-color-grey-text;
+            margin-bottom: 33px;
+
+            @include desktop {
+                font-size: 40px;
+            }
+
+            @include laptop {
+                font-size: 25px;
+            }
+        }
+    
+        &__subtitle {
+            font-family: $subtitle-fontSize;
+            font-size: $subtitle-fontFamily;
+            line-height: 1.35;
+            letter-spacing: 0.34px;
+            text-align: left;
+            color: $button-color-grey-text;
+            margin-bottom: 23px;
+        }
+    }
+    &__word {
+        opacity: 0.3;
+        font-family: $h2-fontFamily;
+        font-size: 210px;
+        color: $flover-word-color;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        z-index: -1;
+
+        @include desktop {
+            font-size: 190px;
+        }
+
+        @include laptop {
+            font-size: 140px;
+        }
+    }
+
+    &__smallCircle {
+        width: 260px;
+        height: 260px;
+        opacity: 0.3;
+        border: solid 5px $flover-word-color;
+        position: absolute;
+        border-radius: 50%;
+        left: 40px;
+        top: 120px;
+
+        @include desktop {
+            width: 230px;
+            height: 230px;
+            left: -4%;
+            top: 15%;
+        }
+
+        @include laptop {
+            width: 150px;
+            height: 150px;
+            left: -4%;
+            top: 25%;
+        }
+    }
+    &__bigCircle {
+        width: 495px;
+        height: 495px;
+        opacity: 0.3;
+        border: solid 5px $flover-word-color;
+        border-radius: 50%;
+        position: absolute;
+        left: -145px;
+        top: 300px;
+
+        @include desktop {
+            width: 400px;
+            height: 400px;
+        }
+
+        @include laptop {
+            width: 300px;
+            height: 300px;
+            left: -17%;
+            top: 39%;
+        }
+    }
+}
