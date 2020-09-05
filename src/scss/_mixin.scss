@@ -102,7 +102,7 @@ $fullhd-width: 1579px;
 } 
 
 @mixin tablet {
-    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet_width}) {
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet_width - 1px}) {
         @content;
     } 
 } 
