@@ -1,0 +1,347 @@
+.order {
+    width: 100%;
+    height: auto;
+    margin-top: 110px;
+
+    @include mobile {
+        margin-top: 50px;
+    }
+
+    &__wrap {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        @include desktop {
+            width: 80%;
+        }
+
+        @include laptop {
+            width: 90%;
+        }
+
+        @include tablet {
+            width: 90%;
+            height: auto;
+            flex-direction: column-reverse;
+            margin-top: 50px;
+        }
+        @include mobile {
+            width: 90%;
+            height: auto;
+            flex-direction: column-reverse;
+            margin-top: 20px;
+        }
+    }
+
+    &__photo {
+        width: 40%;
+        height: auto;
+        position: relative;
+
+        @include desktop {
+            width: 45%;
+        }
+
+        @include laptop {
+            width: 45%;
+            z-index: -2;
+        }
+        @include tablet {
+            width: 100%;
+            z-index: -2;
+        }
+        @include mobile {
+            width: 100%;
+            z-index: -2;
+        }
+
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__text {
+        width: 40%;
+        margin-left: 4%;
+        position: relative;
+
+        @include desktop {
+            width: 44%;
+        }
+
+        @include laptop {
+            width: 44%;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &__title {
+            font-family: $h2-fontFamily;
+            font-size: $h2-fontSize;
+            line-height: 1.32;
+            letter-spacing: 4px;
+            text-align: left;
+            color: $button-color-grey-text;
+            margin-bottom: 12px;
+
+            @include desktop {
+                font-size: 40px;
+            }
+
+            @include laptop {
+                font-size: 25px;
+            }
+            @include tablet {
+                font-size: 34px;
+            }
+
+            @include mobile {
+                font-size: 35px;
+            }
+        }
+
+        &__subtitle {
+            font-family: $h2-fontFamily;
+            font-size: 25px;
+            font-weight: 300;
+            line-height: 2;
+            letter-spacing: 2px;
+            text-align: left;
+            color: $button-color-grey-text;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__list {
+
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &__item {
+            width: 73px;
+            height: 74px;
+            border: 1px solid $button-color-grey-text;
+            @include flexCentCent;
+            border-radius: 50%;
+
+            @include mobile {
+                width: 75px;
+                height: 60px;
+            }
+        }
+
+        &__icon {
+            width: 34px;
+            height: 26px;
+            fill: $button-color-grey-text;
+        }
+
+        &__text {
+            font-family: $subtitle-fontSize;
+            font-size: $subtitle-fontFamily;
+            font-weight: 300;
+            line-height: 1.35;
+            letter-spacing: 0.34px;
+            text-align: left;
+            color: $button-color-grey-text;
+            width: 330px;
+            margin-left: 3%;
+
+            @include mobile {
+                font-size: 15px;
+                width: 100%;
+            }
+        }
+
+        &__button {
+            @include blueButton;
+            text-transform: uppercase;
+
+            @include mobile {
+                width: 100%;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: $font-white;
+                border-color: $blue-button-color;
+            }
+        }
+    }
+}
+
+
+.popUp {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__close {
+        width: 45px;
+        height: 45px;
+        border: 1px solid $button-color-grey-text;
+        border-radius: 50%;
+        @include flexCentCent;
+        margin-top: 6%;
+        margin-right: 6%;
+        align-self: flex-end;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &__icon {
+            font-size: 25px;
+        }
+    }
+
+    &__modalW {
+        width: 60%;
+        height: 585px;
+        background: $font-white;
+        background-image: url(../assets/img/jpg/flowerPopUp.jpg);
+        background-position: right;
+        background-repeat: no-repeat;
+        border: 1px solid $button-color-grey-text;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+        @include mobile {
+            width: 100%;
+            height: 85vh;
+        }
+    }
+
+    &__orderForm {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+
+        &__img {
+            width: 80px;
+            height: 78px;
+            opacity: 0;
+            position: absolute;
+        }
+
+        &__imgLabel {
+            width: 80px;
+            height: 78px;
+            background-image: url(../assets/img/jpg/addPhoto.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+        }
+
+        &__input {
+            width: 100%;
+            height: 75px;
+            border: 1px solid $button-color-grey-text;
+            border-radius: 30px;
+            background: transparent;
+            margin-top: 30px;
+
+            font-family: $subtitle-fontFamily;
+            font-size: $subtitle-fontSize;
+            color: $testimon-text-color;
+            text-transform: uppercase;
+            padding-left: 5%;
+
+            &--name {
+                position: relative;
+            }
+
+            &--tel {
+                position: relative;
+            }
+        }
+
+        &__labelContainer {
+            width: 110px;
+            height: 25px;
+            background-color: $font-white;
+
+            &--name {
+                position: absolute;
+                top: 100%;
+                margin-top: -16%;
+                margin-left: 5%;
+                text-align: center;
+
+                @include mobile {
+                    top: 94%;
+                    margin-top: -29%;
+                }
+            }
+
+            &--tel {
+                position: absolute;
+                top: 100%;
+                margin-top: -17%;
+                margin-left: 5%;
+                text-align: center;
+
+                @include mobile {
+                    top: 94%;
+                    margin-top: -29%;
+                }
+            }
+        }
+
+        &__label {
+            font-family: $subtitle-fontFamily;
+            font-size: $subtitle-fontSize;
+            font-weight: 300;
+            color: $testimon-text-color;
+            text-transform: uppercase;
+        }
+
+        &__wrap {
+            position: relative;
+        }
+
+        &__button {
+            @include blueButton;
+            text-transform: uppercase;
+            margin-top: 50px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $font-white;
+                border-color: $blue-button-color;
+            }
+        }
+    }
+}
+
+.message {
+    color: green;
+    font-size: 10px;
+    margin-top: 5px;
+}

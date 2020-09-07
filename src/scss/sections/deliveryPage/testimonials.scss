@@ -16,16 +16,45 @@
         text-align: center;
         margin-bottom: 40px;
         margin-top: 143px;
+
+        @include mobile {
+            font-size: 30px;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
     }
 }
 
-// .hide-sm {
-//     display:none;
-// }
+.splideSmall {
+    display:none;
 
-// .hide-hd {
-//     display:none;
-// }
+    @include laptop {
+        display: block;
+    }
+
+    @include tablet {
+        display: block;
+    }
+
+    @include mobile {
+        display: block;
+    }
+}
+
+.splideBig {
+    @include laptop {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
+    }
+}
+
 
 .splide {
 
@@ -33,6 +62,18 @@
         height: 342px;
         display: flex;
         align-items: center;
+
+        @include laptop {
+            height: 400px;
+        }
+
+        @include tablet {
+            height: 350px;
+        }
+
+        @include mobile {
+            height: 505px;
+        }
     }
 
     &__slide {
@@ -43,6 +84,10 @@
         position: relative;
         padding: 38px 47px 43px 46px;
         display: flex;
+
+        @include mobile {
+            flex-direction: column;
+        }
 
         &__avatar {
             width: 100%;
@@ -68,12 +113,21 @@
             font-weight: 300;
             color: $testimon-text-color;
             margin-bottom: 19px;
+
+            @include mobile {
+                text-align: center;
+                margin-top: 15px;
+            }
         }
 
         &__name {
             font-family: 'Montserrat';
             font-size: 17px;
             color: $main-rose;
+
+            @include mobile {
+                text-align: center;
+            }
         }
 
         &__tulip {
@@ -93,6 +147,11 @@
 
     &__pagination {
         height: 0px;
+
+        @include mobile {
+            width: 100%;
+            margin-bottom: 55px;
+        }
 
         &__page {
             width: 23px;

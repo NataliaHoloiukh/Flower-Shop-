@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/img/png/favicon.png" />
     <link rel="stylesheet" href="./css/splide.min.css"/>
     <link rel="stylesheet" href="./css/splide-default.min.css"/>
     <link rel="stylesheet" href="./css/style.min.css">
@@ -15,6 +16,37 @@
         <!-- ======== Section 1=========== -->
         <section id="#design">
             <div class="design__container">
+
+                <!-- Mobile menu -->
+                <div class="container" id="burg" onclick="mobileMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+                <div class="mobileMenu" id="mobileMenu">
+                    <a class="mobileMenu__link" href="index.html#home">
+                        <div class="mobileMenu__item">Home</div>
+                    </a>
+                    <a class="mobileMenu__link" href="#about">
+                        <div class="mobileMenu__item">About</div>
+                    </a>
+                    <a class="mobileMenu__link" href="#offers">
+                        <div class="mobileMenu__item">What we offer</div>
+                    </a>
+                    <a class="mobileMenu__link" href="#testimonials">
+                        <div class="mobileMenu__item">Testimonials</div>
+                    </a>
+                    <a class="mobileMenu__link" href="#floverDelivery">
+                        <div class="mobileMenu__item">Flover delivery</div>
+                    </a>
+                    <a class="mobileMenu__link" href="#contacts">
+                        <div class="mobileMenu__item">Our contacts</div>
+                    </a>
+                </div>
+
+                <!-- END of mobile menu -->
+
                 <div class="navigation">
                     <a class="navigation__navButton navigation__navButton--left" href="index.html#home">
                         <div class="navigation__navButton__container">
@@ -44,7 +76,7 @@
         
                 <div class="wrap">
                     <div class="design__left">
-                        <a href="#catalog" class="design__navLink">
+                        <a href="#dreamWed" class="design__navLink design__navLink--blue">
                             <div class="design__navLink__container">
                                 <p class="design__navLink__text">Dream wedding</p>
                             </div>
@@ -54,7 +86,7 @@
                         
                     </div>
                     <div class="design__right">
-                        <a href="#photo" class="design__navLink">
+                        <a href="#perfectDate" class="design__navLink design__navLink--pink">
                             <div class="design__navLink__container">
                                 <p class="design__navLink__text">Perfect date</p>
                             </div>

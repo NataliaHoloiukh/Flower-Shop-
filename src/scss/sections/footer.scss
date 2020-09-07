@@ -7,6 +7,11 @@
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
+
+        @include mobile {
+            width: 90%;
+            height: 100%;
+        }
     }
 
     &__text {
@@ -30,6 +35,11 @@
             font-size: 25px;
             letter-spacing: 1.5px;
             color: $button-color-grey-text;
+
+            @include mobile {
+                font-size: 20px;
+                text-align: center;
+            }
         }
     }
 
@@ -38,6 +48,11 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 140px;
+
+        @include mobile {
+            width: 100%;
+            margin-bottom: 20%;
+        }
         
         &__icon {
             width: 101px;
@@ -46,10 +61,20 @@
             @include flexCentCent;
             border-radius: 50%;
 
+            @include mobile {
+                width: 80px;
+                height: 80px;
+            }
+
             &--ico {
                 width: 62px;
                 height: 62px;
                 fill: $font-white;
+
+                @include mobile {
+                    width: 52px;
+                    height: 52px;
+                }
             }
         }
     }

@@ -2,6 +2,11 @@
     width: 100%;
     height: auto;
     @include flexCentCent;
+    margin-top: 140px;
+
+    @include tablet {
+        margin-top: 50px;
+    }
 
     &__frame {
         width: 95%;
@@ -9,6 +14,20 @@
         padding: 45px 51px;
         display: flex;
         flex-wrap: wrap;
+
+        @include laptop {
+            padding: 2%;
+        }
+
+        @include tablet {
+            padding: 2%;
+            border: solid 50px $light-rose-frame;
+        }
+
+        @include mobile {
+            padding: 2%;
+            border: solid 20px $light-rose-frame;
+        }
     }
 
     &__item {
@@ -19,6 +38,20 @@
         height: auto;
         position: relative;
         margin: 1%;
+
+        @include tablet {
+            width: 45%;
+            height: auto;
+            margin: 2%;
+            order: 2;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: auto;
+            margin: 2%;
+            order: 3;
+        }
 
         &__img {
             width: 100%;
@@ -46,18 +79,101 @@
         @include flexCentCent;
         flex-direction: column;
 
+        @include tablet {
+            width: 100%;
+            order: 1;
+        }
+
+        @include mobile {
+            width: 100%;
+            order: 0;
+            margin-bottom: 5%;
+            margin-top: 4%;
+        }
+
         &__title {
             font-family: 'Merriweather';
             font-size: 50px;
             margin-bottom: 39px;
+
+            @include desktop {
+                font-size: 40px;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            @include laptop {
+                font-size: 40px;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            @include tablet {
+                font-size: 35px;
+                text-align: center;
+            }
+
+            @include mobile {
+                font-size: 35px;
+                margin-bottom: 4%;
+                text-align: center;
+            }
         }        
     }
 
     &__button {
         @include roseButton;
 
+        @include desktop {
+            margin-bottom: 7px;
+        }
+
+        @include laptop {
+            width: 230px;
+            height: 68px;
+            margin-bottom: 3%;
+        }
+
+        @include tablet {
+            margin-bottom: 3%;
+            font-size: 17px;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
         &:hover {
             @include roseButton-hover;
         }
+    }
+
+    &__seeMore {
+        margin: 0 auto;
+
+        &__button {
+            @include roseButton;
+            display: none;
+
+            @include mobile {
+                @include flexCentCent;
+                width: 230px;
+                order: 2;
+                margin-bottom: 4%;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: $font-white;
+                border-color: $rose-button-color;
+            }
+        }
+    }
+}
+
+.hide {
+
+    @include mobile {
+        display: none;
     }
 }

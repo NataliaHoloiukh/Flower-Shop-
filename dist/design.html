@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/img/png/favicon.png" />
     <link rel="stylesheet" href="./css/splide.min.css"/>
     <link rel="stylesheet" href="./css/splide-default.min.css"/>
     <link rel="stylesheet" href="./css/style.min.css">
@@ -15,6 +16,37 @@
         <!-- ======== Section 1=========== -->
         <section id="#design">
             <div class="design__container">
+
+                <!-- Mobile menu -->
+                <div class="container" id="burg" onclick="mobileMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+                <div class="mobileMenu" id="mobileMenu">
+                    <a class="mobileMenu__link" href="index.html#home">
+                        <div class="mobileMenu__item">Home</div>
+                    </a>
+                    <a class="mobileMenu__link" href="#about">
+                        <div class="mobileMenu__item">About</div>
+                    </a>
+                    <a class="mobileMenu__link" href="#offers">
+                        <div class="mobileMenu__item">What we offer</div>
+                    </a>
+                    <a class="mobileMenu__link" href="#testimonials">
+                        <div class="mobileMenu__item">Testimonials</div>
+                    </a>
+                    <a class="mobileMenu__link" href="#floverDelivery">
+                        <div class="mobileMenu__item">Flover delivery</div>
+                    </a>
+                    <a class="mobileMenu__link" href="#contacts">
+                        <div class="mobileMenu__item">Our contacts</div>
+                    </a>
+                </div>
+
+                <!-- END of mobile menu -->
+
                 <div class="navigation">
                     <a class="navigation__navButton navigation__navButton--left" href="index.html#home">
                         <div class="navigation__navButton__container">
@@ -44,7 +76,7 @@
         
                 <div class="wrap">
                     <div class="design__left">
-                        <a href="#catalog" class="design__navLink">
+                        <a href="#dreamWed" class="design__navLink design__navLink--blue">
                             <div class="design__navLink__container">
                                 <p class="design__navLink__text">Dream wedding</p>
                             </div>
@@ -54,7 +86,7 @@
                         
                     </div>
                     <div class="design__right">
-                        <a href="#photo" class="design__navLink">
+                        <a href="#perfectDate" class="design__navLink design__navLink--pink">
                             <div class="design__navLink__container">
                                 <p class="design__navLink__text">Perfect date</p>
                             </div>
@@ -68,7 +100,7 @@
 
 
 <!-- ======== Section About=========== -->
-<section class="about">
+<section class="about" id="about">
     <div class="about__wrap">
 
         <div class="about__photo">
@@ -117,7 +149,7 @@
     </symbol>
 </svg>
 
-<section class="offers">
+<section class="offers" id="offers">
     <div class="offers__wrap">
         
         <div class="offers__bar">
@@ -164,7 +196,7 @@
 
 
 <!-- ======== Dream wedding =========== -->
-<section class="dreamWed">
+<section class="dreamWed" id="dreamWed">
     <div class="dreamWed__frame">
         <div class="dreamWed__left">
             <div class="dreamWed__left__pic dreamWed__left__pic--vertical">
@@ -205,7 +237,7 @@
 <!-- ========END Dream wedding=========== -->
 
 <!-- ======== Perfect Date =========== -->
-<section class="date">
+<section class="date" id="perfectDate">
     <div class="date__frame">
         <div class="date__left">
             <div class="date__left__pic date__left__pic--vertical">
@@ -248,11 +280,122 @@
 <!-- ========END Perfect Date=========== -->
 
 <!-- ==========Testimonials Slider============ -->
-<div class="testimon">
+<div class="testimon" id="testimonials">
 	<div class="testimon__wrap">
 		<h2 class="testimon__title">Testimonials</h2>
 
-		<div class="splide">
+		<div class="splide splideBig">
+			<div class="splide__track">
+				<div class="splide__list">
+
+					<div class="splide__slide">
+						<div class="splide__slide__avatar">
+							<img class="splide__slide__avatar--img" src="./assets/img/jpg/avatar3.jpg">
+						</div>
+						<div class="splide__slide__right">
+							<p class="splide__slide__text">
+								Ordered a bouquet for a girl from a photo, 
+								which was on her Facebook wall. 
+								Surprised 100%, such magic she didn't expect!
+							</p>
+							<p class="splide__slide__name">Mary Key</p>
+						</div>
+						<div class="splide__slide__tulip">
+							<img class="splide__slide__tulip--img" src="./assets/img/png/testimon-tulip.png">
+						</div>
+					</div>
+
+					<div class="splide__slide">
+						<div class="splide__slide__avatar">
+							<img class="splide__slide__avatar--img" src="./assets/img/jpg/avatar4.jpg">
+						</div>
+						<div class="splide__slide__right">
+							<p class="splide__slide__text">
+								Very beautiful bouquets! I ordered a bouquet 
+								for my mother from the catalog on the site,
+								she liked it – even posted on Facebook!
+							</p>
+							<p class="splide__slide__name">Ruby Rose</p>
+						</div>
+						<div class="splide__slide__tulip--downRight">
+							<img class="splide__slide__tulip--img" src="./assets/img/png/testimon-tulip.png">
+						</div>
+					</div>
+
+					<div class="splide__slide">
+						<div class="splide__slide__avatar">
+							<img class="splide__slide__avatar--img" src="./assets/img/jpg/avatar1.jpg">
+						</div>
+						<div class="splide__slide__right">
+							<p class="splide__slide__text">
+								Ordered a bouquet for a girl from a photo, 
+								which was on her Facebook wall. 
+								Surprised 100%, such magic she didn't expect!
+							</p>
+							<p class="splide__slide__name">John Doe</p>
+						</div>
+						<div class="splide__slide__tulip">
+							<img class="splide__slide__tulip--img" src="./assets/img/png/testimon-tulip.png">
+						</div>
+					</div>
+
+					<div class="splide__slide">
+						<div class="splide__slide__avatar">
+							<img class="splide__slide__avatar--img" src="./assets/img/jpg/avatar2.jpg">
+						</div>
+						<div class="splide__slide__right">
+							<p class="splide__slide__text">
+								Very beautiful bouquets! I ordered a bouquet 
+								for my mother from the catalog on the site,
+								she liked it – even posted on Facebook!
+							</p>
+							<p class="splide__slide__name">Kate Brown</p>
+						</div>
+						<div class="splide__slide__tulip--downRight">
+							<img class="splide__slide__tulip--img" src="./assets/img/png/testimon-tulip.png">
+						</div>
+					</div>
+
+					<div class="splide__slide">
+						<div class="splide__slide__avatar">
+							<img class="splide__slide__avatar--img" src="./assets/img/jpg/avatar5.jpg">
+						</div>
+						<div class="splide__slide__right">
+							<p class="splide__slide__text">
+								Ordered a bouquet for a girl from a photo, 
+								which was on her Facebook wall. 
+								Surprised 100%, such magic she didn't expect!
+							</p>
+							<p class="splide__slide__name">Joanna White</p>
+						</div>
+						<div class="splide__slide__tulip">
+							<img class="splide__slide__tulip--img" src="./assets/img/png/testimon-tulip.png">
+						</div>
+					</div>
+
+					<div class="splide__slide">
+						<div class="splide__slide__avatar">
+							<img class="splide__slide__avatar--img" src="./assets/img/jpg/avatar6.jpg">
+						</div>
+						<div class="splide__slide__right">
+							<p class="splide__slide__text">
+								Very beautiful bouquets! I ordered a bouquet 
+								for my mother from the catalog on the site,
+								she liked it – even posted on Facebook!
+							</p>
+							<p class="splide__slide__name">Keith Grey</p>
+						</div>
+						<div class="splide__slide__tulip--downRight">
+							<img class="splide__slide__tulip--img" src="./assets/img/png/testimon-tulip.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="splide splideSmall">
 			<div class="splide__track">
 				<div class="splide__list">
 
@@ -366,7 +509,7 @@
 <!-- ==========END Testimonials Slider============ -->
 
 <!-- ======== About Feeling =========== -->
-<section class="feel">
+<section class="feel" id="floverDelivery">
     <div class="feel__frame">
         <div class="feel__left">
             <div class="feel__left__pic feel__left__pic--vertical">
@@ -414,7 +557,7 @@
 <!-- ========END About Feelings=========== -->
 
 <!-- ======== Making the atmosphere=========== -->
-<section class="contacts">
+<section class="contacts" id="contacts">
     <div class="contacts__wrap">
         <h2 class="contacts__title">Our contacts</h2>
     
@@ -425,15 +568,22 @@
                 <p class="contacts__item__text">Phone</p>
                 <p class="contacts__item__info">8 (982) 930 - 45-34</p>
             </div>
+
+            <span class="contacts__box__lineMob"></span>
+
             <div class="contacts__item">
                 <p class="contacts__item__text">Email</p>
                 <p class="contacts__item__info">fleuragency@gmail.com</p>
             </div>
+
+            <span class="contacts__box__lineMob"></span>
+
             <div class="contacts__item">
                 <p class="contacts__item__text">Address</p>
                 <p class="contacts__item__info">Mississippi, Honey Hollow 1103</p>
             </div>
             <span class="contacts__box__line"></span>
+            <span class="contacts__box__lineMob"></span>
         </div>
     </div>   
 </section>
@@ -462,7 +612,7 @@
         </div>
 
         <div class="footer__social">
-            <a href="#www.facebook.com" class="footer__social__link">
+            <a href="www.facebook.com" class="footer__social__link">
                 <div class="footer__social__icon">
                     <svg class="icon footer__social__icon--ico">
                         <use xlink:href="#messenger"></use>
@@ -470,7 +620,7 @@
                 </div>
             </a>
 
-            <a href="#www.instagram.com" class="footer__social__link">
+            <a href="www.instagram.com" class="footer__social__link">
                 <div class="footer__social__icon">
                     <svg class="icon footer__social__icon--ico">
                         <use xlink:href="#instagram"></use>
@@ -478,7 +628,7 @@
                 </div>
             </a>
 
-            <a href="#whatsapp" class="footer__social__link">
+            <a href="whatsapp" class="footer__social__link">
                 <div class="footer__social__icon">
                     <svg class="icon footer__social__icon--ico">
                         <use xlink:href="#whatsapp"></use>

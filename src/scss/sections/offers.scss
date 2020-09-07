@@ -121,16 +121,16 @@
         &__resp24 {
             @include laptop {
                 top: 5%;
-                left: 75%;
+                left: 70%;
             }
     
             @include tablet {
                 top: 5%;
-                left: 75%;
+                left: 70%;
             }
             @include mobile {
                 top: 11%;
-                left: 75%;
+                left: 68%;
                 width: 100px;
                 height: 100px;
             }
@@ -144,11 +144,11 @@
     
             @include tablet {
                 top: 38%;
-                left: 75%;
+                left: 70%;
             }
             @include mobile {
                 top: 44%;
-                left: 75%;
+                left: 68%;
                 width: 100px;
                 height: 100px;
             }
@@ -162,11 +162,11 @@
     
             @include tablet {
                 top: 70%;
-                left: 75%;
+                left: 70%;
             }
             @include mobile {
                 top: 76%;
-                left: 75%;
+                left: 68%;
                 width: 100px;
                 height: 100px;
             }
@@ -191,6 +191,7 @@
             @include mobile {
                 line-height: 40px;
                 width: 60%;
+                font-size: 20px;
             }
         }
     
