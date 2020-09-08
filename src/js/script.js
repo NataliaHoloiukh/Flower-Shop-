@@ -23,8 +23,6 @@ new Splide( '.splideSmall', {
 } ).mount();
 
 
-
-
 // See More button
 let itemMob = document.getElementsByClassName('hide');
 let seeButton = document.getElementById('seeButton');
