@@ -57,6 +57,22 @@
     opacity: 0.97;
     z-index: 19;
 
+    @include fullhd {
+      display: none;
+    }
+
+    @include desktop {
+        display: none;
+    }
+
+    @include laptop {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
     &__link {
         margin: 15px 0px;
     }

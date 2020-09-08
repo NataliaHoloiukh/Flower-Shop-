@@ -248,6 +248,10 @@
             height: 78px;
             opacity: 0;
             position: absolute;
+
+            &:invalid {
+                border: 2px dashed red;
+            }
         }
 
         &__imgLabel {
@@ -290,7 +294,7 @@
             &--name {
                 position: absolute;
                 top: 100%;
-                margin-top: -16%;
+                margin-top: -10%;
                 margin-left: 5%;
                 text-align: center;
 
@@ -303,7 +307,7 @@
             &--tel {
                 position: absolute;
                 top: 100%;
-                margin-top: -17%;
+                margin-top: -9%;
                 margin-left: 5%;
                 text-align: center;
 

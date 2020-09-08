@@ -49,8 +49,6 @@
             <button id="butOpenModal" onclick="openModal()" class="order__list__button"> order</button>
         </div>
 
-        <div class="order__smallCircle"></div>
-        <div class="order__bigCircle"></div>
     </div>
 
     <div class="popUp" id="popUp">
@@ -62,19 +60,19 @@
 
             <form  onsubmit="getContacts(); return false" id="forma" class="popUp__orderForm" name="OrderForm" method="GET">
 
-                <input class="popUp__orderForm__img" name="image" type="file" accept="image/jpeg,image/png,image/gif">
+                <input class="popUp__orderForm__img" name="image" required type="file" accept="image/jpeg,image/png,image/gif">
                 <label class="popUp__orderForm__imgLabel" for="image"></label>
                 
                 
                 <div class="popUp__orderForm__wrap popUp__orderForm__wrap--name">
-                    <input value="" id="form-client" class="popUp__orderForm__input popUp__orderForm__input--name" name="userName" type="text" autocomplete="off">
+                    <input value="" maxlength="32" pattern="[a-zA-Z\s]+" id="form-client" required class="popUp__orderForm__input popUp__orderForm__input--name" name="userName" type="text" autocomplete="off">
                     <div class="popUp__orderForm__labelContainer popUp__orderForm__labelContainer--name">
                         <label for="userName" class="popUp__orderForm__label popUp__orderForm__label--name">Name</label>
                     </div>
                 </div>
                 
                 <div class="popUp__orderForm__wrap popUp__orderForm__wrap--tel">
-                    <input value="" id="form-tel" class="popUp__orderForm__input" name="userPhonenumber" type="tel" autocomplete="off">
+                    <input value="" pattern="0[0-9]{9}" id="form-tel" required class="popUp__orderForm__input" name="userPhonenumber" type="tel" autocomplete="off">
                     <div class="popUp__orderForm__labelContainer popUp__orderForm__labelContainer--tel">
                         <label for="userPhonenumber" class="popUp__orderForm__label popUp__orderForm__label--tel">phone</label>
                     </div>
