@@ -1,0 +1,215 @@
+.home {
+    width: 100%;
+    height: 100vh;
+    
+    &__container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    &__left {
+        width: 50%;
+        height: 100%;
+        background-image: url('../assets/img/jpg/home-left.jpg');
+        background-repeat: space;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 50%;
+        position: relative;
+
+        @include laptop {
+            background-size: cover;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: 50%;
+            background-repeat: round;
+            align-items: flex-end;
+        }
+    
+        &__color {
+            width: 100%;
+            height: 100%;
+            background-color: $main-blue;
+            position: absolute;
+            opacity: 1;
+        }
+    }
+    &__right {
+        width: 50%;
+        height: 100%;
+        background-image: url('../assets/img/jpg/home-right.jpg');
+        background-repeat: space;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 50%;
+        position: relative;
+
+        @include laptop {
+            background-size: cover;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: 50%;
+            background-repeat: round;
+            align-items: flex-end;
+        }
+    
+        &__color {
+            width: 100%;
+            height: 100%;
+            background-color: $main-rose;
+            position: absolute;
+            opacity: 1;
+        }
+    }
+}
+
+
+.logo {
+    width: 49px;
+    height: 40px;
+}
+
+.text {
+    position: absolute;
+    @include flexCentCent;
+    flex-direction: column;
+    top: 36px;
+    z-index: 10;
+    margin: 0 auto;
+    width: 100%;
+
+    @include laptop {
+        top: 15%;
+        margin-top: 0px;
+    }
+
+    @include mobile {
+        top: 41%;
+        margin-top: -22px;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-family: 'Montserrat';
+        font-weight: 300;
+        color: $font-white;
+        padding: 40px 0 30px;
+
+        @include mobile {
+            padding: 5%;
+        }
+    }
+
+    &__subtitle {
+        font-size: 90px;
+        font-family: 'Merriweather';
+        font-weight: normal;
+        color: $font-white;
+
+        @include mobile {
+            font-size: 50px;
+        }
+    }
+}
+
+.wrap {
+    display: flex;
+    height: 100%;
+
+    @include mobile {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+
+
+.navLink {
+    width: 420px;
+    height: 407px;
+    display: flex;
+    margin-bottom: 45px;
+    position: unset;
+    z-index: 10;
+
+    @include laptop {
+        width: 320px;
+        height: 300px;
+        margin-bottom: 15%;
+    }
+
+    @include tablet {
+        width: 205px;
+        height: 200px;
+        margin-bottom: 15%;
+
+    }
+
+    @include mobile {
+        width: 175px;
+        height: 170px;
+    }
+
+    &--blue {
+        @include mobile {
+            margin-bottom: 33%;
+        }
+    }
+
+    &--pink {
+        @include mobile {
+            margin-bottom: 8%;
+        }
+    }
+
+    &:hover ~ .color {
+        opacity: 0;
+        transition: 2s;
+    }
+
+    &__container {
+        width: 420px;
+        height: 407px;
+        border: 1px solid $font-white;
+        border-radius: 50%;
+        @include flexCentCent;
+
+        @include laptop {
+            width: 100%;
+            height: 100%;
+        }
+
+        @include tablet {
+            width: 100%;
+            height: 100%;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__text {
+        width: 133px;
+        font-family: 'Montserrat';
+        font-weight: normal;
+        font-size: 30px;
+        color: $font-white;
+        text-align: center;
+
+        @include tablet {
+            font-size: 25px;
+        }
+
+        @include mobile {
+            font-size: 23px;
+        }
+    }
+}

@@ -1,0 +1,241 @@
+.offers {
+    width: 100%;
+    height: 100%;
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+
+    @include laptop {
+        margin-top: 0;
+    }
+
+    &__wrap {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        @include laptop {
+            width: 90%;
+        }
+
+        @include tablet {
+            width: 90%;
+        }
+        @include mobile {
+            width: 90%;
+        }
+    }
+
+    &__bar {
+        width: 82%;
+        height: 308px;
+        background-color: #eef4fc;
+        border-radius: 150px;
+        @include flexCentCent;
+        position: relative;
+        justify-content: space-evenly;
+
+        @include laptop {
+            width: 500px;
+            height: 800px;
+            flex-direction: column;
+            margin-right: 6%;
+        }
+
+        @include tablet {
+            width: 500px;
+            height: 800px;
+            flex-direction: column;
+            margin-left: 3%;
+        }
+        @include mobile {
+            width: 500px;
+            height: 800px;
+            flex-direction: column;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__cont {
+            width: 176px;
+            height: 175px;
+            background-color: $light-blue-frame;
+            @include flexCentCent;
+            border-radius: 50%;
+            position: absolute;
+            border-radius: 50%;
+            top: -32%;
+            margin-top: 0px;
+
+            @include laptop {
+                width: 176px;
+                height: 175px;
+            }
+    
+            @include tablet {
+                width: 176px;
+                height: 175px;
+            }
+            @include mobile {
+                height: auto;
+                width: 176px;
+                height: 175px;
+            }
+
+
+                &--24 {
+                    width: 81px;
+                    height: 85px;
+
+                    @include mobile {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+                &--hand {
+                    width: 87px;
+                    height: 85px;
+
+                    @include mobile {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+                &--bus {
+                    width: 79px;
+                    height: 86px;
+
+                    @include mobile {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+        }
+
+        &__resp24 {
+            @include laptop {
+                top: 5%;
+                left: 75%;
+            }
+    
+            @include tablet {
+                top: 5%;
+                left: 70%;
+            }
+            @include mobile {
+                top: 11%;
+                left: 68%;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        &__respHand {
+            @include laptop {
+                top: 38%;
+                left: 75%;
+            }
+    
+            @include tablet {
+                top: 38%;
+                left: 70%;
+            }
+            @include mobile {
+                top: 44%;
+                left: 68%;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        &__respBus {
+            @include laptop {
+                top: 70%;
+                left: 75%;
+            }
+    
+            @include tablet {
+                top: 70%;
+                left: 70%;
+            }
+            @include mobile {
+                top: 76%;
+                left: 68%;
+                width: 100px;
+                height: 100px;
+            }
+        }
+    
+        &__title {
+            font-family: $h2-fontFamily;
+            font-size: $contacts-text-size;
+            color: $button-color-grey-text;
+            line-height: 0.85;
+            letter-spacing: 2.4px;
+            text-align: center;
+            margin-bottom: 20px;
+
+            @include laptop {
+                line-height: 40px;
+            }
+    
+            @include tablet {
+                line-height: 40px;
+            }
+            @include mobile {
+                line-height: 40px;
+                width: 60%;
+                font-size: 20px;
+            }
+        }
+    
+        &__text {
+            font-family: $subtitle-fontFamily;
+            font-size: $subtitle-fontSize;
+            color: $button-color-grey-text;
+            line-height: 1.5;
+            letter-spacing: 0.34px;
+            text-align: center;
+
+            @include laptop {
+                width: 90%;
+            }
+    
+            @include tablet {
+                width: 90%;
+                height: auto;
+            }
+            @include mobile {
+                width: 60%;
+                height: auto;
+            }
+        }
+
+        &__devider {
+            width: 1px;
+            height: 122px;
+            background-color: $button-color-grey-text;
+            
+            @include laptop {
+                width: 255px;
+                height: 1px;
+            }
+    
+            @include tablet {
+                width: 70%;
+                height: 1px;
+            }
+            @include mobile {
+                width: 70%;
+                height: 1px;
+            }
+        }
+    }
+}
+
